@@ -40,7 +40,7 @@ function fetchWeather(cityName) {
         "src",
         "https://openweathermap.org/img/wn/" +
           data.list[0].weather[0].icon +
-          "@1x.png"
+          "@4x.png"
       );
       weatherIcon.setAttribute("alt", data.list[0].weather[0].description);
       temp.innerHTML =
@@ -66,7 +66,7 @@ function fetchWeather(cityName) {
           "(" + forecastMonth + "/" + forecastDay + "/" + forecastYear + ")";
         forecastImg.setAttribute(
           "src",
-          "https://openweathermap.org/img/wn" +
+            "https://openweathermap.org/img/wn/" +
             data.list[dayIndex].weather[0].icon +
             "@2x.png"
         );
