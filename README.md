@@ -21,6 +21,6 @@ ill be using  the [5 Day Weather Forecast API ](https://openweathermap.org/forec
 - JavaScript
 
 ## Usage
--  Vist [GitHub Repo](https://jif945.github.io/Workday-Schedule/)
+-  Vist [GitHub Repo](https://jif945.github.io/WeatherBE/)
 - User enters a city and clicks search weather will populate below
 ![Scheduler](./assets/WeatherApp.png)
