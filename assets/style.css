@@ -1,0 +1,50 @@
+/* styling for page */
+*{
+box-sizing: border-box;
+}
+
+/* variable */
+:root {
+    --primary: green;
+    --seconday: yellow;
+    --tertiary: pink;
+    --border-radius: 0.5rem;
+}
+
+body {
+    font-size: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: auto;
+    padding: auto;
+}
+
+h1 {
+    font-weight: 700;
+}
+.weatherIcon {
+    width: 30%;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+.form-input {
+    width: 100%;
+    padding: 2%;
+    margin: 5px 0;
+    font-size: 1.5rem;
+}
+
+#btn {
+    font-size: 1.5rem;
+    width: 100%;
+    margin: 5px 0;
+}
