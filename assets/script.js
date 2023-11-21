@@ -1,12 +1,12 @@
 // search section
 var cityInput = document.getElementById("search");
 var searchBtn = document.querySelector("#btn");
-var searchHistory = $("seach-histroy");
+var searchHistory = $("search-history-list");
 
 // forecast section
-var searchInfo = document.querySelector(".seachInfo");
+var searchInfo = document.querySelector(".searchInfo");
 var weatherIcon = document.querySelector(".weatherIcon");
-var temperature = document.querySelector(".temperature");
+var temp = document.querySelector(".temp");
 var humidity = document.querySelector(".humidity");
 var wind = document.querySelector(".wind");
 
@@ -43,8 +43,8 @@ function fetchWeather(cityName) {
           "@2x.png"
       );
       weatherIcon.setAttribute("alt", data.list[0].weather[0].description);
-      temperature.innerHTML =
-        "Temperature: " + Math.floor(data.list[0].main.temperature) + "&#176F";
+      temp.innerHTML =
+        "Temperature: " + Math.floor(data.list[0].main.temp) + "&#176F";
       humidity.innerHTML =
         "Humidity:" + Math.floor(data.list[0].main.humidity) + "&";
       wind.innerHTML = "Wind:" + Math.floor(data.list[0].wind.speed) + "Mph";
@@ -58,7 +58,7 @@ function fetchWeather(cityName) {
 
         var forecastDate = document.createElement("b");
         var forecastImg = document.createElement("img");
-        var forecastTemperature = document.createElement("p");
+        var forecastTemp = document.createElement("p");
         var forecastHumidity = document.createElement("p");
         var forecastWind = document.createElement("p");
 
@@ -71,9 +71,9 @@ function fetchWeather(cityName) {
             "@2x.png"
         );
         forecastImg.setAttribute("alt", data.list[0].weather[0].description);
-        forecastTemperature.innerHTML =
+        forecastTemp.innerHTML =
           "Temperature: " +
-          Math.floor(data.list[0].main.temperature) +
+          Math.floor(data.list[0].main.temp) +
           "&#176F";
         forecastHumidity.innerHTML =
           "Humidity:" + Math.floor(data.list[0].main.humidity) + "&";
@@ -82,7 +82,7 @@ function fetchWeather(cityName) {
 
         forecast[i].append(forecastDate);
         forecast[i].append(forecastImg);
-        forecast[i].append(forecastTemperature);
+        forecast[i].append(forecastTemp);
         forecast[i].append(forecastHumidity);
         forecast[i].append(forecastWind);
       }
