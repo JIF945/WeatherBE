@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -21,20 +20,79 @@
       href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <title>Work Day Scheduler</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <title>WeatherBe</title>
   </head>
-  <body>
-
+  <body class="container-fluid">
+    <!-- header -->
+    <header class="header">
+      <div class="bg-secondary">
+        <h1 class="p-2 text-center text-light">WeatherBe</h1>
+      </div>
+    </header>
+    <!-- main of the body -->
     <main>
+      <div class="row">
+        <!-- search bar -->
+        <section class="col-sm-4">
+          <div class="card"></div>
+          <h3 class="card-header">Search For a City</h3>
+          <section id="search-form" class="card-body">
+            <input
+              id="search"
+              type="text"
+              autocapitalize="yes"
+              autofocus="true"
+              class="form-input"
+              placeholder="Enter city or Zip code"
+            />
+            <button id="btn" class="btn btn-secondary btn-md">Search</button>
+          </section>
 
+          <!-- search history -->
+          <section>
+            <ul class="list-group" id="search-history-list"></ul>
+          </section>
+        </section>
+        <div class="col-md-7">
+          <!-- present forecast section -->
+          <section>
+            <h1 class="search"></h1>
+            <img class="WeatherIcon" />
+            <p class="temperature"></p>
+            <p class="humidity"></p>
+            <p class="wind"></p>
+          </section>
 
+          <!-- 5 day section -->
+          <section>
+            <div class="row">
+              <div class="col-lg">
+                <div class="forecast"></div>
+              </div>
+              <div class="col-md">
+                <div class="forecast"></div>
+              </div>
+              <div class="col-sm">
+                <div class="forecast"></div>
+              </div>
+              <div class="col-md">
+                <div class="forecast"></div>
+              </div>
+              <div class="col-md">
+                <div class="forecast"></div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
     </main>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
       integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
       crossorigin="anonymous"
     ></script>
+    <script src="./assets/script.js"></script>
   </body>
 </html>
